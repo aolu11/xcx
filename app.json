@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mood-all/mood-all",
+    "pages/mood-feed/mood-feed",
+    "pages/tag-feed/tag-feed",
+    "pages/album-feed/album-feed",
+    "pages/tag-list/tag-list",
+    "pages/star-album-feed/star-album-feed",
+    "pages/diary-detail/diary-detail"
+  ],
+  "window": {
+    "backgroundColor": "#ccc",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  }
+}

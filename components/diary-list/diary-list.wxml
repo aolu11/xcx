@@ -1,0 +1,66 @@
+<!--components/diary-list/diary-list.wxml-->
+<wxs src="../../utils/common.wxs" module="common"></wxs>
+<view class="body">
+  <block wx:for="{{feeds}}" wx:for-item="feed" wx:key="id">
+    <!--日记-->
+    <view wx:if="{{feed.type === 1}}" class="feed-type-diary" catchtap="$eventJump" data-uri="/pages/diary-detail/diary-detail" data-query="{{ {id: feed.id} }}">
+      <view class="user-info bold">
+        <view class="user-info-wrapper">
+          <text>{{feed.nickname}}</text>
+          <image class="gender" src="{{feed.gender === 1 ? gData.img.male : gData.img.female}}"></image>
+        </view>
+        <image wx:if="{{feed.isTop}}" class="hot" src="{{gData.img.hot}}"></image>
+      </view>
+      <view wx:if="{{page !== 'mood-feed' || (feed.tag && page !== 'tag-feed')}}" style="margin-top: 10rpx">
+        <text wx:if="{{page !== 'mood-feed'}}" class="bold link" style="margin-right: 20rpx" catchtap="$eventJump" data-uri="/pages/mood-feed/mood-feed" data-query="{{ {mid: feed.mood.id} }}">#{{feed.mood.name}}</text>
+        <text wx:if="{{feed.tag && page !== 'tag-feed'}}" class="bold link" catchtap="$eventJump" data-uri="/pages/tag-feed/tag-feed" data-query="{{ {tid: feed.tag.id} }}">#{{feed.tag.name}}</text>
+      </view>
+      <view class="text">
+        <text>{{feed.text}}</text>
+      </view>
+      <view wx:if="{{feed.photos.length > 0}}" class="photo">
+        <gallery imgs="{{feed.photos}}" source="list"></gallery>
+      </view>
+      <view wx:if="{{feed.album && page !== 'album-feed'}}" class="album-wrap bold link"  catchtap="$eventJump" data-uri="/pages/album-feed/album-feed" data-query="{{ {albumId: feed.album.id} }}">
+        <image class="album" src="{{gData.img.album}}"></image>
+        <text>{{feed.album.title}}</text>
+      </view>
+      <view class="footer">
+        <text class="time">{{common.formatTimeAgo(feed.createTime)}}</text>
+        <view class="control">
+          <image src="{{gData.img.like_thick}}"></image>
+          <text wx:if="{{feed.likedNum > 0}}">{{feed.likedNum}}</text>
+          <image src="{{gData.img.comment_thick}}"></image>
+          <text wx:if="{{feed.likedNum > 0}}">{{feed.commentedNum}}</text>
+        </view>
+      </view>
+    </view>
+    <!--热门话题-->
+    <view wx:elif="{{feed.type === 2}}" class="feed-type-hot-tag">
+      <view class="hot-tags-ads-header">
+        <text class="bold">热门话题</text>
+        <text class="link bold" catchtap="$eventJump" data-uri="/pages/tag-list/tag-list" data-query="{{ {type: 'hot'} }}">更多</text>
+      </view>
+      <view>
+        <view class="hot-tag-row" wx:for="{{feed.tags}}" wx:key="id" catchtap="$eventJump" data-uri="/pages/tag-feed/tag-feed" data-query="{{ {tid: item.id} }}">
+          <image src="{{gData.img.hot_tag}}"></image>
+          <text class="link bold">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+    <!--专辑-->
+    <view wx:elif="{{feed.type === 3}}" class="feed-type-star-album">
+      <view class="star-album-category-ads-header">
+        <text class="bold">精选专辑</text>
+        <text class="link bold" catchtap="onRandomStarAlbum">换一批</text>
+      </view>
+      <view>
+        <view class="star-album-category-row" wx:for="{{feed.albums}}" wx:key="id" catchtap="$eventJump" data-uri="/pages/star-album-feed/star-album-feed" data-query="{{ {id: item.id, name: item.name} }}">
+          <image src="{{gData.img.star_album}}"></image>
+          <text class="link bold">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="hr" wx:if="{{index !== feeds.length - 1}}"></view>
+  </block>
+</view>

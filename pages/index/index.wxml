@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="body">
+  <mood-swiper moods="{{moods}}" col="5">
+  </mood-swiper>
+  <navigator url="/pages/mood-all/mood-all" class="btn-all-moods">
+    <text>查看全部频道</text>
+  </navigator>
+  <diary-list feeds="{{feeds}}" page="index" bind:randomStarAlbum="onRandomStarAlbum">
+  </diary-list>
+</view>

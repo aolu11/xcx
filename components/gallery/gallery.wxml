@@ -1,0 +1,2 @@
+<!--components/gallery/gallery.wxml-->
+<image class="{{galleryImgClass[index]}}" wx:for="{{imgs}}" wx:key="url" src="{{item.url}}?imageView2/1/w/110/h/110" mode="aspectFill" catchtap="onImageTap" data-index="{{index}}"></image>

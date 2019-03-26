@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 600,
+  "usingComponents": {
+    "mood-swiper": "/components/mood-swiper/mood-swiper",
+    "diary-list": "/components/diary-list/diary-list"
+  },
+  "navigationBarTitleText": "树洞"
+}

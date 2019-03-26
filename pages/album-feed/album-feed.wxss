@@ -1,0 +1,36 @@
+/* pages/album-feed/album-feed.wxss */
+.banner-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 420rpx;
+}
+
+.banner-bg image {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-bg .mask {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.banner-text {
+  position: absolute;
+  top: 164rpx;
+  text-align: center;
+  color: white;
+}
+
+.banner-text view {
+  margin-bottom: 8rpx
+}
+
+.body {
+  margin-top: 420rpx;
+}

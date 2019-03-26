@@ -1,0 +1,42 @@
+/**app.wxss**/
+
+/*@import "pure.wxss";*/
+
+page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  font-family: 'PingFangHK-Light';
+  color: rgb(51, 51, 51);
+  word-break: break-all;
+}
+
+.body {
+  width: 100%;
+}
+
+.bold {
+  font-family: 'PingFangHK-Medium' !important;
+}
+
+.link {
+  color: rgb(101, 165, 255);
+}
+
+.hr {
+  width: 100%;
+  height: 1rpx;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 30rpx 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

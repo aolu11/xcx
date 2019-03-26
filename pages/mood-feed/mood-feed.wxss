@@ -1,0 +1,10 @@
+/* pages/mood-feed/mood-feed.wxss */
+.topTags {
+  width: calc(100% + 20rpx);
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.topTags text {
+  display: inline-block;
+  margin-right: 20rpx;
+}

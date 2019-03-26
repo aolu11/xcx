@@ -1,0 +1,143 @@
+/* components/diary-list/diary-list.wxss */
+.bold {
+  font-family: 'PingFangHK-Medium' !important;
+}
+
+.link {
+  color: rgb(101, 165, 255);
+}
+
+.body {
+  margin-top: 30rpx;
+}
+
+.user-info {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-info-wrapper image {
+  vertical-align: middle;
+}
+
+.user-info-wrapper text {
+  vertical-align: middle;
+}
+
+.gender {
+  margin-left: 10rpx;
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.hot {
+  width: 88rpx;
+  height: 36rpx;
+}
+
+.text {
+  margin-top: 10rpx;
+  max-height: 250rpx;
+  line-height: 42rpx;
+  overflow: hidden;
+}
+
+.photo {
+  margin-top: 20rpx;
+}
+
+.album-wrap {
+  margin-top: 20rpx;
+  background: rgba(86, 165, 255, 0.08);
+  border-radius: 8rpx;
+  padding: 11rpx 10rpx 13rpx 10rpx;
+  display: inline-block;
+  font-size: 24rpx;
+}
+
+.album {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.album-wrap text {
+  vertical-align: middle;
+  margin-left: 10rpx;
+}
+
+.footer {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(102, 102, 102);
+  font-size: 22rpx;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+}
+
+.control image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 20rpx;
+}
+
+.control text {
+  margin-left: 10rpx;
+}
+
+.hr {
+  width: 100%;
+  height: 1rpx;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 32rpx 0;
+}
+
+.star-album-category-ads-header {
+  margin-top: 29rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hot-tags-ads-header {
+  margin-top: 29rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hot-tag-row {
+  margin-top: 16rpx;
+}
+
+.hot-tag-row image {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.hot-tag-row text {
+  margin-left: 16rpx;
+  vertical-align: middle;
+}
+
+.star-album-category-row {
+  margin-top: 16rpx;
+  display: inline-block;
+  width: 50%;
+}
+
+.star-album-category-row image {
+  width: 38rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.star-album-category-row text {
+  margin-left: 10rpx;
+  vertical-align: middle;
+}

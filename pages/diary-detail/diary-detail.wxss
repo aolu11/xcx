@@ -1,0 +1,120 @@
+/* pages/diary-detail/diary-detail.wxss */
+
+page {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 0;
+}
+
+.body {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 25rpx 24rpx 0 24rpx;
+}
+
+.card {
+  background: white;
+  padding: 56rpx 40rpx;
+  border-radius: 24rpx 24rpx 0 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  flex-shrink: 0;
+}
+
+.date-wrapper {
+  display: flex;
+}
+
+.day {
+  font-size: 72rpx;
+  font-family: 'PingFangSC-Light';
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 22rpx;
+  color: rgb(102, 102, 102);
+  margin-left: 24rpx;
+}
+
+.liked-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 22rpx;
+  color: rgb(102, 102, 102);
+}
+
+.placeholder {
+  visibility: hidden;
+}
+
+.content {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch
+}
+
+.content .text {
+  margin-top: 40rpx;
+}
+
+.photo {
+  margin-top: 20rpx;
+}
+
+.photo-placeholder {
+  height: 40rpx;
+}
+
+.album-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.album-left {
+  display: flex;
+}
+
+.album-photo {
+  width: 94rpx;
+  height: 94rpx;
+}
+
+.album-row .right {
+  display: flex;
+  align-items: center;
+}
+
+.comments {
+  margin-top: 40rpx;
+}
+
+.comment {
+  margin-bottom: 20rpx;
+}
+
+.comment .content {
+  margin-top: 8rpx;
+}
+
+.comment .time {
+  margin-top: 16rpx;
+  color: rgb(102, 102, 102);
+  font-size: 22rpx;
+}
+
+.gender {
+  margin-left: 10rpx;
+  width: 24rpx;
+  height: 24rpx;
+}

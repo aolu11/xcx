@@ -1,0 +1,5 @@
+<!--pages/star-album-feed/start-album-feed.wxml-->
+<view class="body">
+  <diary-list feeds="{{feeds}}" page="star-album-feed">
+  </diary-list>
+</view>

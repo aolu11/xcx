@@ -1,0 +1,61 @@
+<!--pages/diary-detail/diary-detail.wxml-->
+<import src="/components/img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{imgLoadQ}}"></template>
+<wxs src="../../utils/common.wxs" module="common"></wxs>
+<view class="body">
+  <view class="card">
+    <view class="head">
+      <view class="date-wrapper">
+        <view class="day">28</view>
+        <view class="date">
+          <view>2019年03月，星期四</view>
+          <view>阴转晴，5~15℃</view>
+        </view>
+      </view>
+      <view class="liked-wrapper">
+        <view class="liked">{{diary.likedNum}} {{(diary.mood && diary.mood.likeText) || '喜欢'}}</view>
+        <view class="placeholder">x</view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="bold">她：{{diary.nickname}}</view>
+      <view class="text">{{diary.text}}</view>
+      <view wx:if="{{diary.photos.length > 0}}" class="photo">
+          <gallery imgs="{{diary.photos}}" source="detail"></gallery>
+      </view>
+      <view class="photo-placeholder">
+      </view>
+      <block wx:if="{{diary.album}}">
+        <view class="hr"></view>
+        <view class="album-row" catchtap="$eventJump" data-uri="/pages/album-feed/album-feed" data-query="{{ {albumId: diary.album.id} }}">
+          <view class="album-left">
+            <image class="album-photo" wx:if="{{diary.album.photo}}" src="{{diary.album.photo}}?imageView2/1/w/94/h/94/format/jpg/q/50"></image>
+            <view style="margin-left:26rpx">
+              <view class="bold">{{diary.album.title}}</view>
+              <view>{{diary.album.diaryNum}} 罐</view>
+            </view>
+          </view>
+          <view class="right">></view>
+        </view>
+      </block>
+      <block wx:if="{{comments.length > 0}}">
+        <view class="hr"></view>
+        <view class="bold">评论 {{diary.commentedNum}}</view>
+        <view class="comments">
+          <view class="comment" wx:for="{{comments}}" wx:key="id" wx:for-item="comment">
+            <view class="userinfo">
+              <text class="bold">{{comment.nickname}}</text>
+              <block wx:if="{{comment.replyToNickname}}">
+                <text> 回复 </text>
+                <text class="bold">{{comment.replyToNickname}}</text>
+              </block>
+              <image class="gender" src="{{comment.gender === 1 ? gData.img.male : gData.img.female}}"></image>
+            </view>
+            <view class="content">{{comment.text}}</view>
+            <text class="time">{{common.formatTimeAgo(comment.createTime)}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

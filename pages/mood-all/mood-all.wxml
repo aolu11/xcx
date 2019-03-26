@@ -1,0 +1,20 @@
+<!--pages/mood-all/mood-all.wxml-->
+<view class="body">
+  <block wx:for="{{moodsView}}" wx:for-item="moodView">
+    <view class="mood-section">
+      <view class="mood-title">{{moodView.name}}</view>
+      <view>
+        <block wx:for="{{moodView.list}}" wx:for-item="listRow">
+          <view>
+            <block wx:for="{{listRow}}">
+              <view class="mood-wrap" catchtap="$eventJump" data-uri="/pages/mood-feed/mood-feed" data-query="{{ {mid: item.id} }}">
+                <image src="{{item.icon}}"></image>
+                <text>{{item.name}}</text>
+              </view>
+            </block>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

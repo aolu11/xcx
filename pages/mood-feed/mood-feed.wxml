@@ -1,0 +1,13 @@
+<!--pages/mood-feed/mood-feed.wxml-->
+<view class="body">
+  <block wx:if="{{topTags}}">
+    <view class="hr"></view>
+    <view class="topTags">
+      <text class="link bold" wx:for="{{topTags}}" wx:key="{{id}}" catchtap="$eventJump" data-uri="/pages/tag-feed/tag-feed" data-query="{{ {tid: item.id} }}">#{{item.name}}</text>
+      <text class="link bold" catchtap="$eventJump" data-uri="/pages/tag-list/tag-list" data-query="{{ {type: 'mood', mid: mood.id} }}">#全部话题</text>
+    </view>
+  </block>
+  <view class="hr"></view>
+  <diary-list feeds="{{feeds}}" page="mood-feed">
+  </diary-list>
+</view>

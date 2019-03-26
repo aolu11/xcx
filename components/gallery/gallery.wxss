@@ -1,0 +1,20 @@
+/* components/gallery/gallery.wxss */
+.gallery-img {
+  border-radius: 10rpx;
+  margin-right: 8rpx;
+  transition: all 0.2s;
+}
+
+.gallery-img-list {
+  width: 218rpx;
+  height: 218rpx;
+}
+
+.gallery-img-detail {
+  width: 202rpx;
+  height: 202rpx;
+}
+
+.gallery-img:nth-child(3n) {
+  margin-right: 0;
+}

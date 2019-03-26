@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 600,
+  "usingComponents": {
+    "diary-list": "/components/diary-list/diary-list"
+  }
+}

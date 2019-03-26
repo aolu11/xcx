@@ -1,0 +1,5 @@
+<!--pages/tag-feed/tag-feed.wxml-->
+<view class="body">
+  <diary-list feeds="{{feeds}}" page="tag-feed">
+  </diary-list>
+</view>

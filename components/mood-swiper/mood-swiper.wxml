@@ -1,0 +1,29 @@
+<view class="mood-swiper">
+  <view class="tab">
+    <ul catchtap="onTabTap">
+      <li data-pos="0" class="{{tabLiClass[0]}}">推荐</li>
+      <li data-pos="1" class="{{tabLiClass[1]}}">情绪</li>
+      <li data-pos="2" class="{{tabLiClass[2]}}">社交</li>
+      <li data-pos="3" class="{{tabLiClass[3]}}">爱好</li>
+      <li data-pos="4" class="{{tabLiClass[4]}}">生活</li>
+      <li data-pos="5" class="{{tabLiClass[5]}}">收藏</li>
+    </ul>
+    <view class="underscore {{underscorePosClass}}"></view>
+  </view>
+  <swiper bindchange="onSwiperChange" current="{{swiperCurrent}}" style="height: {{swiperHeight}}">
+    <block wx:for="{{moodsView}}" wx:for-item="moodView">
+      <swiper-item>
+        <block wx:for="{{moodView.list}}" wx:for-item="listRow">
+          <view>
+            <block wx:for="{{listRow}}" wx:key="id">
+              <view class="mood-wrap" catchtap="$eventJump" data-uri="/pages/mood-feed/mood-feed" data-query="{{ {mid: item.id} }}">
+                <image src="{{item.icon}}"></image>
+                <text>{{item.name}}</text>
+              </view>
+            </block>
+          </view>
+        </block>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

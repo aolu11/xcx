@@ -1,0 +1,7 @@
+<!--pages/tag-list/tag-list.wxml-->
+<view class="body">
+  <view class="tag-row" wx:for="{{tags}}" wx:key="id" catchtap="$eventJump" data-uri="/pages/tag-feed/tag-feed" data-query="{{ {tid: item.id} }}">
+    <image src="{{gData.img.hot_tag}}"></image>
+    <text class="bold link">{{item.name}}</text>
+  </view>
+</view>

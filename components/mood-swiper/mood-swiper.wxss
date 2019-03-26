@@ -1,0 +1,67 @@
+.bold {
+  font-family: 'PingFangHK-Medium' !important;
+}
+
+.mood-swiper ul {
+  width: 100%;
+}
+
+.mood-swiper li.active {
+  color: rgb(101, 165, 255);
+  font-family: 'PingFangHK-Medium' !important;
+}
+
+.mood-swiper .underscore {
+  width: 2em;
+  margin-top: 10rpx;
+  height: 1px;
+  margin-left: 0;
+  transition: margin-left 0.3s;
+  background: rgb(101, 165, 255);
+}
+
+.mood-swiper .underscore.p1 {
+  margin-left: calc(2em + 20rpx);
+}
+
+.mood-swiper .underscore.p2 {
+  margin-left: calc(2 * (2em + 20rpx));
+}
+
+.mood-swiper .underscore.p3 {
+  margin-left: calc(3 * (2em + 20rpx));
+}
+
+.mood-swiper .underscore.p4 {
+  margin-left: calc(4 * (2em + 20rpx));
+}
+
+.mood-swiper .underscore.p5 {
+  margin-left: calc(5 * (2em + 20rpx));
+}
+
+.mood-swiper li {
+  margin-right: 20rpx;
+}
+
+.mood-swiper swiper {
+  width: 100%;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
+
+.mood-wrap {
+  text-align: center;
+  width: 20%;
+  padding: 20rpx 0;
+  display: inline-block;
+}
+
+.mood-wrap text {
+  display: block;
+}
+
+.mood-wrap image {
+  width: 56rpx;
+  height: 56rpx;
+}

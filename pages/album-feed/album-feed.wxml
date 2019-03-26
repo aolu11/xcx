@@ -1,0 +1,13 @@
+<!--pages/album-feed/album-feed.wxml-->
+<view class="banner-bg">
+  <image wx:if="{{album.photo}}" src="{{album.photo}}?imageView2/1/w/750/h/420/format/jpg/q/50"></image>
+  <view class="mask"></view>
+</view>
+<view class="banner-text">
+  <view class="bold" style="font-size:48rpx">{{album.title}}</view>
+  <view>{{album.diaryNum}} 罐 · {{album.followNum}} 人关注</view>
+</view>
+<view class="body">
+  <diary-list feeds="{{feeds}}" page="album-feed">
+  </diary-list>
+</view>
